@@ -1,0 +1,41 @@
+EUNICE MUTURI
+Full-stack Web Developer
+
+Location: Kenya
+LinkedIn: https://www.linkedin.com/in/eunice-muturi-7023b6342/
+GitHub: https://github.com/Eunice-ctrlz
+
+PROFILE
+Full-stack developer with a strong backend focus. Experienced in building APIs, managing relational databases, and implementing secure authentication systems. Passionate about writing clean, maintainable code and delivering scalable web applications.
+
+CORE SKILLS
+- Python, FastAPI, Django
+- PostgreSQL, SQL
+- HTML5, CSS3, JavaScript
+- REST API design and integration
+- Authentication and authorization
+- Responsive UI implementation
+
+PROJECT HIGHLIGHTS
+1. Fast Fibers Platform
+- Built API-first backend workflows for service onboarding and request tracking.
+- Improved endpoint performance with query and data-flow optimizations.
+
+2. Authentication and Access Control
+- Implemented JWT-based authentication and role-aware access policies.
+- Added safer token lifecycle handling for better security.
+
+3. Frontend Responsive Experiences
+- Designed mobile-first interfaces with adaptive layout systems.
+- Improved usability and consistency across screen sizes.
+
+SERVICES
+- Backend Development
+- Frontend Development
+- MVP Development for Startups
+
+AVAILABILITY
+Open to internships, freelance projects, and junior full-time opportunities.
+
+CONTACT
+Email: eunicemuturi.dev@gmail.com
