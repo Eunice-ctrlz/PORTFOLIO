@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Craft Cove by Eunice Muturi — a Django marketplace for handmade goods with catalogue, reviews, wishlists, cart synchronisation and stock-safe order handling.">
+    <meta property="og:title" content="Craft Cove | Eunice Muturi">
+    <meta property="og:description" content="Craft Cove by Eunice Muturi — a Django marketplace for handmade goods with catalogue, reviews, wishlists, cart synchronisation and stock-safe order handling.">
+    <meta property="og:type" content="article">
+    <title>Craft Cove | Eunice Muturi</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="project-page">
+    <header>
+        <div class="project-topbar">
+            <a class="project-brand" href="../index.html">EUNICE M.</a>
+            <nav class="project-nav">
+                <a href="../index.html#portfolio">Work</a>
+                <a href="../index.html#expertise">Expertise</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+            <a class="btn btn-alt" href="../index.html#contact">Get in Touch</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="project-shell">
+                <a class="project-back-link" href="../index.html#portfolio"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects</a>
+                <p class="eyebrow">Full Stack &middot; Marketplace</p>
+                <h1 class="project-title">Craft Cove</h1>
+                <p class="project-intro">A marketplace for handmade goods, built in Django. Catalogue with categories and reviews, wishlists, a cart that survives login, and an order pipeline careful enough to give reserved stock back when a payment falls through.</p>
+
+                <div class="project-tags">
+                    <span>Django</span>
+                    <span>Python</span>
+                    <span>SQLite</span>
+                    <span>GitHub Actions</span>
+                    <span>Server-rendered</span>
+                    <span>Vercel</span>
+                </div>
+
+                <div class="project-actions">
+                    <a class="btn" href="https://craft-cove-topaz.vercel.app" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Open Live Demo</a>
+                    <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/Craft-Cove" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> View Repository</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-preview-wrap">
+            <div class="project-shell project-preview-card">
+                <div class="project-browser-bar">
+                    <span class="project-browser-dot red"></span>
+                    <span class="project-browser-dot yellow"></span>
+                    <span class="project-browser-dot green"></span>
+                    <span class="project-browser-url">craft-cove-topaz.vercel.app</span>
+                    <a class="project-browser-open" href="https://craft-cove-topaz.vercel.app" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+                <div class="project-live-frame">
+                    <iframe src="https://craft-cove-topaz.vercel.app" title="Live preview of Craft Cove" loading="lazy" referrerpolicy="no-referrer"></iframe>
+                </div>
+            </div>
+            <p class="project-frame-note">Live embed of the deployed app. If it doesn't load in your browser, <a href="https://craft-cove-topaz.vercel.app" target="_blank" rel="noopener">open it in a new tab</a>.</p>
+        </section>
+
+        <section class="project-shell case-section">
+            <h2 class="case-heading">What's <span>inside</span></h2>
+            <p class="case-lead">A conventional commerce stack, with the attention spent on the states most builds get wrong.</p>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <strong>4</strong>
+                    <span>Core domains</span>
+                    <small>Users, products, orders, payments</small>
+                </div>
+                <div class="metric-card">
+                    <strong>Live</strong>
+                    <span>Deployment</span>
+                    <small>Running on Vercel</small>
+                </div>
+                <div class="metric-card">
+                    <strong>CI</strong>
+                    <span>Automation</span>
+                    <small>GitHub Actions workflow</small>
+                </div>
+                <div class="metric-card">
+                    <strong>Seeded</strong>
+                    <span>Demo data</span>
+                    <small>One management command</small>
+                </div>
+                <div class="metric-card">
+                    <strong>Cart</strong>
+                    <span>Sync</span>
+                    <small>Guest cart survives login</small>
+                </div>
+                <div class="metric-card">
+                    <strong>Stock</strong>
+                    <span>Safety</span>
+                    <small>Allocations released on failure</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-shell project-info-grid">
+            <article class="project-panel">
+                <h2>The Problem</h2>
+                <p>Independent makers selling handmade work need a storefront that handles the boring parts correctly &mdash; stock that reflects reality, a cart that doesn't vanish when someone logs in, and orders that don't quietly hold inventory hostage after a payment fails.</p><p>Those are the details that turn a demo into something a maker could actually run, and they're the ones this build focuses on.</p>
+            </article>
+            <article class="project-panel">
+                <h2>My Role</h2>
+                <p>Sole developer. I built the data model, the storefront and checkout flow, the payment and order services, and the seeding command that makes a fresh clone immediately demonstrable.</p>
+                <ul>
+                    <li>Catalogue &amp; review models</li>
+                    <li>Cart and checkout flow</li>
+                    <li>Order &amp; payment services</li>
+                    <li>Demo seeding command</li>
+                    <li>Deployment</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="project-shell case-section">
+            <h2 class="case-heading">App <span>structure</span></h2>
+            <p class="case-lead">Four Django apps and a services layer holding the logic that doesn't belong in a view.</p>
+            <div class="module-grid">
+                <div class="module-card"><i class="fa-solid fa-user" aria-hidden="true"></i><h4>User</h4><p>Accounts, forms and the seller/buyer relationship.</p></div>
+                <div class="module-card"><i class="fa-solid fa-box-open" aria-hidden="true"></i><h4>products</h4><p><code>Category</code>, <code>Product</code>, <code>ProductReview</code> and <code>WishlistItem</code>.</p></div>
+                <div class="module-card"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i><h4>orders</h4><p>Order lifecycle, plus <code>cart_sync</code> and a <code>services</code> layer.</p></div>
+                <div class="module-card"><i class="fa-solid fa-credit-card" aria-hidden="true"></i><h4>payments</h4><p>Payment records and the flow that confirms or releases an order.</p></div>
+                <div class="module-card"><i class="fa-solid fa-seedling" aria-hidden="true"></i><h4>seed_marketplace</h4><p>Management command that populates a browsable demo catalogue.</p></div>
+                <div class="module-card"><i class="fa-brands fa-github" aria-hidden="true"></i><h4>.github/workflows</h4><p>CI running on push so a broken commit is visible immediately.</p></div>
+            </div>
+        </section>
+
+        <section class="project-shell case-section">
+            <h2 class="case-heading">Engineering <span>decisions</span></h2>
+            <div class="decision-grid">
+                <article class="decision-card">
+                    <h3>Release stock when payment fails</h3>
+                    <p><code>release_order_allocations</code> returns reserved stock and capacity for a cancelled payment order. Without it, every abandoned checkout permanently removes inventory that was never sold &mdash; a slow leak that's hard to trace later.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Business logic in services</h3>
+                    <p>Order and payment logic lives in <code>services.py</code> rather than in views. Views stay thin, and the same operation can be triggered from a view, a command or a test without duplication.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Carts that survive login</h3>
+                    <p><code>cart_sync</code> merges a guest cart into the user's cart at sign-in. Losing a basket at the login step is a self-inflicted abandoned checkout.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Seeded demo data</h3>
+                    <p>A single management command fills the marketplace with realistic products. Nobody evaluates an empty storefront kindly, and the seed doubles as fixtures for testing.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Reviews and wishlists as models</h3>
+                    <p>Both are first-class records rather than bolt-ons, so they can be queried, moderated and counted &mdash; wishlist volume is a real demand signal for a maker.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>CI from the beginning</h3>
+                    <p>A GitHub Actions workflow runs on push. Cheap to add at the start, and it catches the commit that breaks the build before it's three commits back.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="project-shell case-cta">
+            <h2>Want a walkthrough of the code?</h2>
+            <p>I'm happy to talk through the architecture or the decisions above &mdash; and I build systems like this for other people too.</p>
+            <div class="project-actions">
+                <a class="btn" href="../index.html#contact">Get in Touch</a>
+                <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/Craft-Cove" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> View Repository</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="project-footer">
+        <div class="project-footer-inner">
+            <a class="project-brand" href="../index.html">EUNICE M.</a>
+            <div class="project-footer-links">
+                <a href="https://www.linkedin.com/in/eunice-muturi-7023b6342/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/Eunice-ctrlz" target="_blank" rel="noopener">GitHub</a>
+                <a href="../index.html#contact">Email</a>
+            </div>
+            <div class="project-footer-copy">&copy; <span id="year"></span> Eunice Muturi. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

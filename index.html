@@ -3,134 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Eunice Muturi is an ML Engineer and Full Stack Developer specializing in Python, machine learning, and scalable web applications.">
+    <meta name="description" content="Eunice Muturi is an ML Engineer, Python specialist and Full Stack Developer building intelligent, production-grade systems.">
+    <meta name="theme-color" content="#050505">
     <meta property="og:title" content="Eunice Muturi | ML Engineer & Full Stack Developer">
     <meta property="og:description" content="Python specialist building intelligent ML systems and scalable full-stack applications.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="profile-pic.jpeg">
+    <meta property="og:image" content="images/logo.png">
     <meta property="og:url" content="/">
-    <title>EUNICE M.</title>
-    <link rel="icon" type="image/jpeg" href="profile-pic.jpeg">
+    <title>Eunice Muturi | ML Engineer & Full Stack Developer</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h2 class="logo"><span>E</span>unice</h2>
+    <a class="skip-link" href="#home">Skip to content</a>
+
+    <header id="siteHeader">
+        <a class="logo" href="#home">
+            <span class="logo-mark" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="30" height="30" role="img" aria-hidden="true">
+                    <path d="M16 2 29 9v14L16 30 3 23V9z" fill="none" stroke="url(#lg)" stroke-width="2"/>
+                    <circle cx="16" cy="16" r="3.4" fill="url(#lg)"/>
+                    <circle cx="16" cy="7.5" r="1.9" fill="#f5d878"/>
+                    <circle cx="24" cy="21" r="1.9" fill="#f5d878"/>
+                    <circle cx="8" cy="21" r="1.9" fill="#f5d878"/>
+                    <path d="M16 9.4v3.2M18.6 17.6 22.3 19.6M13.4 17.6 9.7 19.6" stroke="#c8a13a" stroke-width="1.4"/>
+                    <defs>
+                        <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#f5d878"/>
+                            <stop offset="100%" stop-color="#8a6a1e"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </span>
+            <span class="logo-text"><span>E</span>unice</span>
+        </a>
 
         <button class="menu-toggle" id="menuToggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars"></i>
         </button>
 
-        <nav id="primary-nav">
+        <nav id="primary-nav" aria-label="Primary">
             <div class="navbar">
                 <a href="#home" class="active">Home</a>
-                <a href="#competencies">Competencies</a>
-                <a href="#skills">Skills</a>
-                <a href="#services">Services</a>
+                <a href="#about">About Me</a>
+                <a href="#expertise">Expertise</a>
                 <a href="#portfolio">Projects</a>
+                <a href="#packages">Packages</a>
+                <a href="#faq">FAQs</a>
                 <a href="#contact">Contact</a>
             </div>
         </nav>
 
+        <div class="header-actions">
+            <a class="header-button" href="#contact">Hire Me</a>
+        </div>
     </header>
 
     <main>
+        <!-- ============ HERO ============ -->
         <section class="hero-section" id="home">
-            <div class="hero-text">
-                <h4>HELLO!</h4>
-                <h1>I'm <span>Eunice Muturi</span></h1>
-                <h3>ML Engineer | Full Stack Developer | Python Specialist</h3>
-                <p>Building intelligent systems and scalable applications with Python. I leverage machine learning, data science, and modern full-stack architecture to solve complex problems and deliver production-grade solutions.</p>
+            <div class="glow glow-a" aria-hidden="true"></div>
+            <div class="glow glow-b" aria-hidden="true"></div>
 
-                <div class="hero-actions">
-                    <a href="#contact" class="header-button">Let's Chat</a>
-                </div>
+            <div class="hero-text">
+                <p class="hello">Hello Everyone!</p>
+                <h1>I'm <span class="typed" id="typed" aria-label="Eunice Muturi"></span><span class="caret" aria-hidden="true"></span></h1>
+                <h2 class="hero-role">ML Engineer &middot; Python Specialist &middot; Full Stack Developer</h2>
+                <p class="hero-copy">I build intelligent systems that ship. From data pipelines and model training to the API and interface that put a model in front of real users &mdash; designed for accuracy, scale and maintainability.</p>
+
+                <form class="hero-form" id="heroForm" action="https://formspree.io/f/movwprgj" method="POST">
+                    <label class="sr-only" for="heroEmail">Your email address</label>
+                    <input type="email" id="heroEmail" name="email" placeholder="Type your email address" required>
+                    <input type="hidden" name="message" value="Quick contact request from the portfolio hero form.">
+                    <button type="submit" class="btn">Get in touch <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <p class="hero-form-status" id="heroStatus" role="status" aria-live="polite"></p>
 
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/eunice-muturi-7023b6342/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/Eunice-ctrlz" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/Eunice-ctrlz" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/eunice-muturi-7023b6342/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:eunicemuturi.dev@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://wa.me/254700000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
 
-            <div class="Hero-image">
-                <img src="images/logo.png" alt="Portrait of Eunice Muturi" width="360" height="360" fetchpriority="high" decoding="async">
+            <div class="hero-image">
+                <div class="hero-image-ring" aria-hidden="true"></div>
+                <img src="images/logo.png" alt="Portrait of Eunice Muturi" width="380" height="380" fetchpriority="high" decoding="async">
+                <span class="float-chip chip-1"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</span>
+                <span class="float-chip chip-2"><i class="fa-solid fa-brain" aria-hidden="true"></i> TensorFlow</span>
+                <span class="float-chip chip-3"><i class="fa-solid fa-bolt" aria-hidden="true"></i> FastAPI</span>
+                <span class="spark spark-1" aria-hidden="true"></span>
+                <span class="spark spark-2" aria-hidden="true"></span>
             </div>
         </section>
 
-        <section class="featured-project" id="featured">
-            <div class="featured-card">
-                <div class="featured-image">
-                    <img src="images/coding 1 (1).png" alt="Featured project preview" width="900" height="520" decoding="async">
+        <!-- ============ EXPERTISE PANEL ============ -->
+        <section class="expertise" id="expertise">
+            <div class="expertise-panel">
+                <article class="expertise-item">
+                    <span class="expertise-icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></span>
+                    <h3>Machine<br>Learning</h3>
+                    <p>Supervised and unsupervised models with scikit-learn, TensorFlow and PyTorch &mdash; from feature engineering to evaluation.</p>
+                </article>
+                <article class="expertise-item">
+                    <span class="expertise-icon"><i class="fa-brands fa-python" aria-hidden="true"></i></span>
+                    <h3>Python<br>Engineering</h3>
+                    <p>Clean, tested, well-typed Python. OOP design, Pandas and NumPy pipelines, and performance profiling that holds up in production.</p>
+                </article>
+                <article class="expertise-item">
+                    <span class="expertise-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+                    <h3>Full Stack<br>Development</h3>
+                    <p>FastAPI, Django and Flask on the back end, React and Vue on the front &mdash; one coherent product, not stitched-together parts.</p>
+                </article>
+                <article class="expertise-item">
+                    <span class="expertise-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
+                    <h3>Data<br>Engineering</h3>
+                    <p>PostgreSQL and MongoDB schema design, indexing and query optimisation, plus ETL pipelines that keep models fed with clean data.</p>
+                </article>
+                <article class="expertise-item">
+                    <span class="expertise-icon"><i class="fa-solid fa-plug-circle-bolt" aria-hidden="true"></i></span>
+                    <h3>APIs &amp;<br>Microservices</h3>
+                    <p>Async REST services with validation, versioning and sane error handling, ready to integrate with third-party platforms.</p>
+                </article>
+                <article class="expertise-item">
+                    <span class="expertise-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+                    <h3>Security &amp;<br>Deployment</h3>
+                    <p>JWT auth, role-based access control, containerised deploys and CI so what works locally works everywhere else.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ ABOUT / STATS ============ -->
+        <section class="about-section" id="about">
+            <div class="about-copy">
+                <p class="eyebrow">About Me</p>
+                <h2>Turning models into <span>products people use</span></h2>
+                <p>I'm Eunice Muturi, a machine learning engineer and Python specialist based in Kenya. Most ML work stalls somewhere between a promising notebook and a system anyone can actually rely on &mdash; closing that gap is the part I enjoy most.</p>
+                <p>I take a problem from data exploration and model selection all the way through the API, the database and the interface, then leave behind documentation and tests so the next person isn't guessing. I care about correctness first, clarity second, and clever last.</p>
+                <div class="about-points">
+                    <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i> End-to-end ownership</span>
+                    <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Production-minded ML</span>
+                    <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Clear communication</span>
                 </div>
-                <div class="featured-content">
-                    <p class="eyebrow">Featured Work</p>
-                    <h2>Full Stack ML Application</h2>
-                    <p class="featured-summary">Production-grade full-stack system combining ML model inference with a robust backend and interactive frontend. Built with Python, optimized for scale.</p>
-                    <div class="tech-badges">
-                        <span>FastAPI</span>
-                        <span>TensorFlow</span>
-                        <span>React</span>
-                        <span>PostgreSQL</span>
+                <div class="button-row">
+                    <a class="btn" href="#portfolio">See My Work</a>
+                    <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz" target="_blank" rel="noopener">GitHub Profile</a>
+                </div>
+            </div>
+
+            <div class="stat-grid">
+                <div class="stat-card"><strong data-count="8">0</strong><span>Projects shipped</span></div>
+                <div class="stat-card"><strong data-count="82" data-suffix="%">0</strong><span>STI model test accuracy</span></div>
+                <div class="stat-card"><strong data-count="15" data-suffix="+">0</strong><span>Tools &amp; frameworks</span></div>
+                <div class="stat-card"><strong data-count="100" data-suffix="%">0</strong><span>Remote-ready delivery</span></div>
+            </div>
+        </section>
+
+
+        <!-- ============ PROJECTS ============ -->
+        <section class="portfolio-section" id="portfolio">
+            <h2 class="section-title">My Latest <span>Projects</span></h2>
+            <p class="section-sub">Eight builds from my GitHub &mdash; predictive models, multi-tenant backends, e-commerce platforms and the interfaces on top of them. Every card links to a case study and the real source.</p>
+
+            <div class="filter-row" role="group" aria-label="Filter projects">
+                <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-btn" type="button" data-filter="ml" aria-pressed="false">Machine Learning</button>
+                <button class="filter-btn" type="button" data-filter="fullstack" aria-pressed="false">Full Stack</button>
+                <button class="filter-btn" type="button" data-filter="backend" aria-pressed="false">Backend &amp; APIs</button>
+                <button class="filter-btn" type="button" data-filter="commerce" aria-pressed="false">E-commerce</button>
+            </div>
+
+            <div class="project-grid" id="projectGrid">
+                <article class="project-box" data-category="ml fullstack">
+                    <img src="images/coding 1 (1).png" alt="STI Predictive Model project preview" width="400" height="300" loading="lazy" decoding="async">
+                    <div class="project-content">
+                        <span class="project-tag">Machine Learning</span>
+                        <h3>STI Predictive Model</h3>
+                        <p>Clinical risk-scoring platform: a Random Forest classifier served through a Django Ninja API, with a React dashboard, county heatmap and full audit trail.</p>
+                        <div class="button-row">
+                            <a class="btn" href="projects/sti-predictive-model.html">Case Study</a>
+                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/STI-PREDICTIVE-MODEL" target="_blank" rel="noopener">Code</a>
+                        </div>
                     </div>
-                    <div class="button-row">
-                        <a class="btn" href="#">Live Demo</a>
-                        <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz" target="_blank" rel="noopener">View Code</a>
+                </article>
+
+                <article class="project-box" data-category="ml">
+                    <img src="images/coding 1 (2).png" alt="Loan Default Risk Predictor project preview" width="400" height="300" loading="lazy" decoding="async">
+                    <div class="project-content">
+                        <span class="project-tag">Machine Learning</span>
+                        <h3>Loan Default Risk Predictor</h3>
+                        <p>KNN and Naive Bayes trained side by side to classify Kenyan loan applicants into three risk bands, with cross-validated tuning and a Django interface.</p>
+                        <div class="button-row">
+                            <a class="btn" href="projects/loan-default-predictor.html">Case Study</a>
+                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/Loan-predictor-model" target="_blank" rel="noopener">Code</a>
+                        </div>
                     </div>
-                </div>
+                </article>
+
+                <article class="project-box" data-category="backend commerce">
+                    <img src="images/coding 1 (4).png" alt="WhatsApp Commerce Platform project preview" width="400" height="300" loading="lazy" decoding="async">
+                    <div class="project-content">
+                        <span class="project-tag">Backend</span>
+                        <h3>WhatsApp Commerce Platform</h3>
+                        <p>Multi-tenant SaaS backend: 15 Django apps, JWT auth, Celery and Redis, M-Pesa Daraja and the WhatsApp Business API, with encrypted per-tenant credentials.</p>
+                        <div class="button-row">
+                            <a class="btn" href="projects/whatsapp-commerce-platform.html">Case Study</a>
+                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/Whatsapp-ecommerce" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-box" data-category="fullstack backend">
+                    <img src="images/coding 1 (5).png" alt="FindAHome project preview" width="400" height="300" loading="lazy" decoding="async">
+                    <div class="project-content">
+                        <span class="project-tag">Full Stack</span>
+                        <h3>FindAHome</h3>
+                        <p>Real estate platform with four roles, admin verification gates and a fraud moderation queue. Django REST behind a React 19 and TypeScript front end.</p>
+                        <div class="button-row">
+                            <a class="btn" href="projects/find-a-home.html">Case Study</a>
+                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/Find-a-home" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-box" data-category="fullstack">
+                    <img src="images/coding 1 (3).png" alt="Kilimo Guru project preview" width="400" height="300" loading="lazy" decoding="async">
+                    <div class="project-content">
+                        <span class="project-tag">Full Stack</span>
+                        <h3>Kilimo Guru</h3>
+                        <p>Smart agriculture platform for Kenyan farmers: crop records, weather alerts, a produce marketplace, M-Pesa payments and an offline-capable PWA.</p>
+                        <div class="button-row">
+                            <a class="btn" href="projects/kilimo-guru.html">Case Study</a>
+                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/KILIMOGURU" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                
+
+                <article class="project-box" data-category="commerce fullstack">
+                    <img src="images/coding 1 (2).png" alt="Craft Cove project preview" width="400" height="300" loading="lazy" decoding="async">
+                    <div class="project-content">
+                        <span class="project-tag">E-commerce</span>
+                        <h3>Craft Cove</h3>
+                        <p>Django marketplace for handmade goods: categories, reviews, wishlists, a cart that survives login, and reserved stock released when a payment fails.</p>
+                        <div class="button-row">
+                            <a class="btn" href="projects/craft-cove.html">Case Study</a>
+                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/Craft-Cove" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-box" data-category="commerce fullstack">
+                    <img src="images/coding 1 (5).png" alt="TJ Naturals project preview" width="400" height="300" loading="lazy" decoding="async">
+                    <div class="project-content">
+                        <span class="project-tag">E-commerce</span>
+                        <h3>TJ Naturals</h3>
+                        <p>Skincare store with nested categories, SKU-level inventory and low-stock thresholds, zone-based shipping rates and a support chatbot, on Docker Compose.</p>
+                        <div class="button-row">
+                            <a class="btn" href="projects/tj-naturals.html">Case Study</a>
+                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/Tj-Naturals" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-box" data-category="fullstack">
+                    <img src="images/coding 1 (3).png" alt="Vehicle Management project preview" width="400" height="300" loading="lazy" decoding="async">
+                    <div class="project-content">
+                        <span class="project-tag">Full Stack</span>
+                        <h3>Vehicle Management</h3>
+                        <p>Car hire platform with role-separated accounts, date-range bookings, generated booking references and automatic duration-based pricing.</p>
+                        <div class="button-row">
+                            <a class="btn" href="projects/vehicle-management.html">Case Study</a>
+                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/Vehicle-Management" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </div>
+                </article>
             </div>
+            <p class="filter-empty" id="filterEmpty" hidden>No projects in this category yet.</p>
+
+            <p class="portfolio-more">Also on GitHub: <a href="https://github.com/Eunice-ctrlz/AI-EVALUATION" target="_blank" rel="noopener">AI Evaluation Portfolio</a> &mdash; structured technical reviews comparing AI-generated Python solutions against test suites and design criteria.</p>
         </section>
 
-        <section class="competencies" id="competencies">
-            <h1>Core <span>Competencies</span></h1>
-            <div class="competency-grid">
-                <article class="competency-card">
-                    <h3>🤖 ML Engineer</h3>
-                    <ul class="tech-list">
-                        <li>Scikit-learn, TensorFlow, PyTorch</li>
-                        <li>Data preprocessing & feature engineering</li>
-                        <li>Model development & optimization</li>
-                        <li>Predictive analytics & classification</li>
-                    </ul>
-                </article>
-                <article class="competency-card">
-                    <h3>🛠️ Full Stack Developer</h3>
-                    <ul class="tech-list">
-                        <li>Frontend: React, Vue.js, Vanilla JS</li>
-                        <li>Backend: FastAPI, Django, Flask</li>
-                        <li>Database: PostgreSQL, MongoDB</li>
-                        <li>API Design & Integration</li>
-                    </ul>
-                </article>
-                <article class="competency-card">
-                    <h3>🐍 Python Specialist</h3>
-                    <ul class="tech-list">
-                        <li>Core Python & OOP principles</li>
-                        <li>Data analysis with Pandas & NumPy</li>
-                        <li>Testing & code quality</li>
-                        <li>Performance optimization</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
+        <!-- ============ SKILLS ============ -->
+        <section class="skills-section" id="skills">
+            <h2 class="section-title">Technical <span>Proficiency</span></h2>
+            <p class="section-sub">Where my day-to-day hours actually go.</p>
 
-        <section class="My-skills" id="skills">
-            <h1>Technical <span>Proficiency</span></h1>
             <div class="skills-wrapper">
                 <div class="skill-category">
-                    <h3>Machine Learning & Data Science</h3>
+                    <h3>Machine Learning &amp; Data Science</h3>
                     <div class="bar">
                         <div class="bar-name"><span>Python</span><span class="bar-percent">90%</span></div>
                         <div class="progress-bar"><span class="python"></span></div>
                     </div>
                     <div class="bar">
-                        <div class="bar-name"><span>ML Frameworks (TF/PyTorch)</span><span class="bar-percent">85%</span></div>
+                        <div class="bar-name"><span>ML Frameworks (TensorFlow / PyTorch)</span><span class="bar-percent">85%</span></div>
                         <div class="progress-bar"><span class="ml"></span></div>
                     </div>
                     <div class="bar">
-                        <div class="bar-name"><span>Data Analysis & Pandas</span><span class="bar-percent">85%</span></div>
+                        <div class="bar-name"><span>Data Analysis &amp; Pandas</span><span class="bar-percent">85%</span></div>
                         <div class="progress-bar"><span class="data"></span></div>
                     </div>
                 </div>
@@ -138,15 +315,15 @@
                 <div class="skill-category">
                     <h3>Full Stack Development</h3>
                     <div class="bar">
-                        <div class="bar-name"><span>Backend (FastAPI/Django)</span><span class="bar-percent">88%</span></div>
+                        <div class="bar-name"><span>Backend (FastAPI / Django)</span><span class="bar-percent">88%</span></div>
                         <div class="progress-bar"><span class="backend"></span></div>
                     </div>
                     <div class="bar">
-                        <div class="bar-name"><span>Frontend (React/Vue)</span><span class="bar-percent">85%</span></div>
+                        <div class="bar-name"><span>Frontend (React / Vue)</span><span class="bar-percent">85%</span></div>
                         <div class="progress-bar"><span class="frontend"></span></div>
                     </div>
                     <div class="bar">
-                        <div class="bar-name"><span>PostgreSQL & Databases</span><span class="bar-percent">82%</span></div>
+                        <div class="bar-name"><span>PostgreSQL &amp; Databases</span><span class="bar-percent">82%</span></div>
                         <div class="progress-bar"><span class="database"></span></div>
                     </div>
                 </div>
@@ -158,173 +335,239 @@
                         <div class="progress-bar"><span class="javascript"></span></div>
                     </div>
                     <div class="bar">
-                        <div class="bar-name"><span>HTML/CSS</span><span class="bar-percent">90%</span></div>
+                        <div class="bar-name"><span>HTML / CSS</span><span class="bar-percent">90%</span></div>
                         <div class="progress-bar"><span class="html"></span></div>
                     </div>
                     <div class="bar">
-                        <div class="bar-name"><span>Git & Version Control</span><span class="bar-percent">88%</span></div>
+                        <div class="bar-name"><span>Git &amp; Version Control</span><span class="bar-percent">88%</span></div>
                         <div class="progress-bar"><span class="git"></span></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="service-section" id="services">
-            <h2>My <span>Services</span></h2>
-            <div class="service-container">
-                <article class="service-box">
-                    <h3>ML Model Development</h3>
-                    <p>End-to-end ML solutions from problem definition to production deployment. I build predictive models, handle data pipelines, perform feature engineering, and deploy scalable ML systems using industry-standard frameworks.</p>
-                    <a class="btn" href="#">Read More</a>
-                </article>
+        <!-- ============ FAQ ============ -->
+        <section class="faq-section" id="faq">
+            <h2 class="section-title">FAQ<span>s</span></h2>
 
-                <article class="service-box">
-                    <h3>Full Stack Application Development</h3>
-                    <p>Complete application solutions with modern Python backends (FastAPI/Django), responsive frontends (React/Vue), and robust database architecture. I build systems designed for scale, performance, and maintainability.</p>
-                    <a class="btn" href="#">Read More</a>
-                </article>
+            <div class="faq-list">
+                <div class="faq-item open">
+                    <button class="faq-question" type="button" aria-expanded="true">
+                        <span>What kind of machine learning problems do you take on?</span>
+                        <i class="fa-solid fa-minus" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Mostly supervised learning on structured data &mdash; classification, regression and forecasting where the payoff is a clear business decision. I handle the full pipeline: cleaning and feature engineering, model selection and tuning, honest evaluation, then deployment behind an API so the predictions actually reach users.</p>
+                    </div>
+                </div>
 
-                <article class="service-box">
-                    <h3>Data Engineering & Analysis</h3>
-                    <p>Transform raw data into actionable insights. I design data pipelines, perform advanced analysis with Pandas and NumPy, optimize database queries, and build data infrastructure for ML and analytics applications.</p>
-                    <a class="btn" href="#">Read More</a>
-                </article>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Can you build the application around the model too?</span>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes &mdash; that's the reason I work full stack. I build the FastAPI or Django service, design the PostgreSQL schema behind it, and put a React or Vue interface on top. You get one system from one person, instead of coordinating hand-offs between three.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>What does a typical project timeline look like?</span>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A focused model or API usually lands in two to three weeks. A full application with an ML component runs closer to six to eight. I scope it properly after the first call rather than guessing, and I share progress in weekly increments you can actually run.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Do you work remotely and with existing teams?</span>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Remote by default and comfortable joining an existing codebase, repo conventions and review process. I write code meant to be read by other people &mdash; typed, tested and documented &mdash; so onboarding your team onto it is part of the delivery, not an afterthought.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>What happens after the project ships?</span>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You keep the source, the documentation and a recorded walkthrough. Models drift, so I offer a retainer for monitoring, retraining and new features &mdash; but it's optional, and nothing is built in a way that locks you into me.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="portfolio-section" id="portfolio">
-            <h2>Project <span>Case Studies</span></h2>
-            <div class="project-container-1">
-                <article class="project-box">
-                    <img src="images/coding 1 (2).png" alt="Fast Fibers project preview" width="400" height="300" loading="lazy" decoding="async">
-                    <div class="project-content">
-                        <h3>ML Predictive Analytics</h3>
-                        <p>Engineered end-to-end ML pipeline with scikit-learn for predictive modeling, feature engineering, and model optimization achieving 92% accuracy.</p>
-                        <div class="button-row">
-                            <a class="btn" href="#">Live Demo</a>
-                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz" target="_blank" rel="noopener">View Code</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-box">
-                    <img src="images/coding 1 (2).png" alt="Front-end project preview" width="400" height="300" loading="lazy" decoding="async">
-                    <div class="project-content">
-                        <h3>React Dashboard Interface</h3>
-                        <p>Built interactive React dashboard with real-time data visualization, responsive design, and optimized rendering for high-throughput applications.</p>
-                        <div class="button-row">
-                            <a class="btn" href="#">Live Demo</a>
-                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz" target="_blank" rel="noopener">View Code</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-box">
-                    <img src="images/coding 1 (3).png" alt="Database project preview" width="400" height="300" loading="lazy" decoding="async">
-                    <div class="project-content">
-                        <h3>PostgreSQL Architecture</h3>
-                        <p>Designed normalized database schemas with strategic indexing, query optimization, and implemented stored procedures for complex business logic.</p>
-                        <div class="button-row">
-                            <a class="btn" href="#">Live Demo</a>
-                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz" target="_blank" rel="noopener">View Code</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-box">
-                    <img src="images/coding 1 (4).png" alt="API integration project preview" width="400" height="300" loading="lazy" decoding="async">
-                    <div class="project-content">
-                        <h3>FastAPI Microservices</h3>
-                        <p>Developed high-performance REST APIs with FastAPI, async/await patterns, input validation, and third-party service integration with robust error handling.</p>
-                        <div class="button-row">
-                            <a class="btn" href="#">Live Demo</a>
-                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz" target="_blank" rel="noopener">View Code</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-box">
-                    <img src="images/coding 1 (5).png" alt="Authentication project preview" width="400" height="300" loading="lazy" decoding="async">
-                    <div class="project-content">
-                        <h3>Secure Auth & Authorization</h3>
-                        <p>Implemented JWT authentication, role-based access control (RBAC), OAuth integration, and encrypted credential management for enterprise security.</p>
-                        <div class="button-row">
-                            <a class="btn" href="#">Live Demo</a>
-                            <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz" target="_blank" rel="noopener">View Code</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
+        <!-- ============ TESTIMONIALS ============ -->
         <section class="testimonials" id="testimonials">
-            <h2>Client <span>Feedback</span></h2>
+            <h2 class="section-title">Testimo<span>nials</span></h2>
+            <p class="section-sub">Feedback from people I've built with.</p>
+
             <div class="testimonials-grid">
                 <article class="testimonial-card">
+                    <div class="testimonial-head">
+                        <span class="avatar">PL</span>
+                        <div>
+                            <h3>Product Lead</h3>
+                            <span>Startup Collaboration</span>
+                        </div>
+                    </div>
                     <p>"Eunice delivered clean backend architecture quickly and communicated technical decisions clearly throughout the project."</p>
-                    <h3>Product Lead</h3>
-                    <span>Startup Collaboration</span>
+                    <i class="fa-solid fa-quote-right quote-mark" aria-hidden="true"></i>
                 </article>
+
                 <article class="testimonial-card">
+                    <div class="testimonial-head">
+                        <span class="avatar">TM</span>
+                        <div>
+                            <h3>Team Mentor</h3>
+                            <span>Developer Program</span>
+                        </div>
+                    </div>
                     <p>"Great ownership and consistency. The final product was responsive, polished, and ready for production use."</p>
-                    <h3>Team Mentor</h3>
-                    <span>Developer Program</span>
+                    <i class="fa-solid fa-quote-right quote-mark" aria-hidden="true"></i>
                 </article>
             </div>
         </section>
 
+        <!-- ============ STACK STRIP ============ -->
+        <section class="stack-section" id="stack">
+            <div class="stack-head">
+                <h2>The stack I build with<br>every day</h2>
+                <a class="stack-link" href="#contact">Let's talk <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="stack-logos">
+                <span><i class="fa-brands fa-python" aria-hidden="true"></i> Python</span>
+                <span><i class="fa-solid fa-brain" aria-hidden="true"></i> TensorFlow</span>
+                <span><i class="fa-solid fa-bolt" aria-hidden="true"></i> FastAPI</span>
+                <span><i class="fa-brands fa-react" aria-hidden="true"></i> React</span>
+                <span><i class="fa-solid fa-database" aria-hidden="true"></i> PostgreSQL</span>
+                <span><i class="fa-brands fa-docker" aria-hidden="true"></i> Docker</span>
+                <span><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git</span>
+            </div>
+        </section>
+
+        <!-- ============ CURRENTLY ============ -->
         <section class="now-section" id="now">
-            <h2>Currently <span>Exploring</span></h2>
-            <p>Deepening expertise in advanced ML techniques, production ML systems, and scalable full-stack architecture with modern DevOps practices.</p>
+            <h2 class="section-title">Currently <span>Exploring</span></h2>
+            <p>Deepening my work in advanced ML techniques, production ML systems and scalable architecture with modern DevOps practice.</p>
             <div class="tech-badges">
                 <span>PyTorch</span>
                 <span>Kubernetes</span>
-                <span>FastAPI Advanced Patterns</span>
+                <span>Advanced FastAPI Patterns</span>
                 <span>MLOps</span>
             </div>
         </section>
 
+        <!-- ============ CONTACT ============ -->
         <section class="contact" id="contact">
-            <h2>Contact <span>Me</span></h2>
-            <p class="availability">Open to building new projects and collaborating on exciting opportunities.</p>
-            <div class="quick-contact-links">
-                <a href="mailto:eunicemuturi.dev@gmail.com">Email Me</a>
-                <a href="https://wa.me/254700000000" target="_blank" rel="noopener">WhatsApp</a>
-                <a href="https://www.linkedin.com/in/eunice-muturi-7023b6342/" target="_blank" rel="noopener">LinkedIn</a>
+            <h2 class="section-title">Contact <span>Me</span></h2>
+            <p class="availability">Open to new projects, collaborations and full-time opportunities.</p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <a class="contact-line" href="mailto:eunicemuturi.dev@gmail.com">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <span><strong>Email</strong>eunicemuturi.dev@gmail.com</span>
+                    </a>
+                    <a class="contact-line" href="https://wa.me/254700000000" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        <span><strong>WhatsApp</strong>Message me directly</span>
+                    </a>
+                    <a class="contact-line" href="https://www.linkedin.com/in/eunice-muturi-7023b6342/" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        <span><strong>LinkedIn</strong>eunice-muturi</span>
+                    </a>
+                    <a class="contact-line" href="https://github.com/Eunice-ctrlz" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        <span><strong>GitHub</strong>Eunice-ctrlz</span>
+                    </a>
+                </div>
+
+                <form id="contactForm" action="https://formspree.io/f/movwprgj" method="POST">
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+                    <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
-            <form id="contactForm" action="https://formspree.io/f/movwprgj" method="POST">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-                <p>Feel free to send me a message:</p>
-                <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
-
-                <button type="submit" class="btn">Send</button>
-                <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
-            </form>
         </section>
     </main>
 
     <footer>
-        <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Projects</a>
-            <a href="#contact">Contact</a>
+        <div class="footer-panel">
+            <div class="footer-brand">
+                <h3><span>E</span>unice Muturi</h3>
+                <p>ML Engineer, Python specialist and full stack developer building intelligent systems that make it all the way to production.</p>
+                <p class="footer-location"><strong>Working remotely worldwide</strong></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Case Studies</h4>
+                <ul>
+                    <li><a href="projects/sti-predictive-model.html">STI Predictive Model</a></li>
+                    <li><a href="projects/loan-default-predictor.html">Loan Risk Predictor</a></li>
+                    <li><a href="projects/whatsapp-commerce-platform.html">WhatsApp Commerce</a></li>
+                    <li><a href="projects/find-a-home.html">FindAHome</a></li>
+                    <li><a href="projects/kilimo-guru.html">Kilimo Guru</a></li>
+                    <li><a href="projects/craft-cove.html">Craft Cove</a></li>
+                    <li><a href="projects/tj-naturals.html">TJ Naturals</a></li>
+                    <li><a href="projects/vehicle-management.html">Vehicle Management</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact">
+                <h4>Work With Me</h4>
+                <p>Have a model to build or an application to ship? Send a note and I'll reply within two working days.</p>
+                <a class="footer-mail" href="mailto:eunicemuturi.dev@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> eunicemuturi.dev@gmail.com</a>
+                <a class="btn" href="#contact">Start a project</a>
+            </div>
         </div>
-        <div class="footer-socials">
-            <a href="https://github.com/Eunice-ctrlz" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/eunice-muturi-7023b6342/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+
+        <div class="footer-bottom">
+            <p>Copyright &copy; <span id="year"></span> Eunice Muturi. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Eunice-ctrlz" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/eunice-muturi-7023b6342/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:eunicemuturi.dev@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
         </div>
-        <p>Copyright <span id="year"></span> Eunice Muturi. All rights reserved.</p>
     </footer>
 
+    <a class="to-top" href="#home" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+
     <script>
-        const header = document.querySelector("header");
+        /* ---------- Navigation ---------- */
+        const header = document.getElementById("siteHeader");
         const menuToggle = document.getElementById("menuToggle");
         const navLinks = document.querySelectorAll(".navbar a");
 
@@ -338,56 +581,213 @@
             menuToggle.setAttribute("aria-expanded", String(isOpen));
         });
 
-        navLinks.forEach((link) => {
-            link.addEventListener("click", () => {
-                closeMenu();
-            });
-        });
+        navLinks.forEach((link) => link.addEventListener("click", closeMenu));
 
         document.addEventListener("click", (event) => {
-            const isMenuOpen = header.classList.contains("open");
-            if (!isMenuOpen) return;
+            if (!header.classList.contains("open")) return;
             if (!header.contains(event.target)) closeMenu();
         });
 
-        const contactForm = document.getElementById("contactForm");
-        const formStatus = document.getElementById("formStatus");
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") closeMenu();
+        });
 
-        contactForm.addEventListener("submit", async (event) => {
-            event.preventDefault();
-            formStatus.textContent = "Sending your message...";
-            formStatus.classList.remove("error");
+        /* ---------- Header shrink + back to top ---------- */
+        const toTop = document.getElementById("toTop");
+        const onScroll = () => {
+            const y = window.scrollY;
+            header.classList.toggle("scrolled", y > 40);
+            toTop.classList.toggle("visible", y > 600);
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        /* ---------- Active link on scroll ---------- */
+        const sections = [...document.querySelectorAll("main section[id]")];
+        const linkFor = (id) => document.querySelector(`.navbar a[href="#${id}"]`);
+
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const link = linkFor(entry.target.id);
+                if (!link) return;
+                if (entry.isIntersecting) {
+                    navLinks.forEach((a) => a.classList.remove("active"));
+                    link.classList.add("active");
+                }
+            });
+        }, { rootMargin: "-45% 0px -50% 0px" });
+
+        sections.forEach((section) => navObserver.observe(section));
+
+        /* ---------- Hero typing effect ---------- */
+        const typedNode = document.getElementById("typed");
+        const words = ["Eunice Muturi", "an ML Engineer", "a Python Specialist", "a Full Stack Dev"];
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        if (reduceMotion) {
+            typedNode.textContent = words[0];
+        } else {
+            let wordIndex = 0;
+            let charIndex = 0;
+            let deleting = false;
+
+            const type = () => {
+                const word = words[wordIndex];
+                charIndex += deleting ? -1 : 1;
+                typedNode.textContent = word.slice(0, charIndex);
+
+                let delay = deleting ? 55 : 110;
+                if (!deleting && charIndex === word.length) {
+                    delay = 1800;
+                    deleting = true;
+                } else if (deleting && charIndex === 0) {
+                    deleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    delay = 350;
+                }
+                setTimeout(type, delay);
+            };
+            type();
+        }
+
+        /* ---------- Reveal on scroll ---------- */
+        const revealTargets = document.querySelectorAll(
+            ".expertise-item, .project-box, .package-card, .testimonial-card, .stat-card, .faq-item, .featured-card, .about-copy, .skill-category, .contact-grid > *"
+        );
+        revealTargets.forEach((el) => el.classList.add("reveal"));
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("visible");
+                revealObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.15 });
+
+        revealTargets.forEach((el) => revealObserver.observe(el));
+
+        /* ---------- Skill bars ---------- */
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.querySelectorAll(".progress-bar span").forEach((span) => span.classList.add("animate"));
+                skillObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.35 });
+
+        const skillsSection = document.querySelector("#skills");
+        if (skillsSection) skillObserver.observe(skillsSection);
+
+        /* ---------- Animated counters ---------- */
+        const counters = document.querySelectorAll(".stat-card strong");
+        const countObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const node = entry.target;
+                const target = Number(node.dataset.count);
+                const suffix = node.dataset.suffix || "";
+                const duration = 1200;
+                const start = performance.now();
+
+                const step = (now) => {
+                    const progress = Math.min((now - start) / duration, 1);
+                    node.textContent = Math.round(target * progress) + suffix;
+                    if (progress < 1) requestAnimationFrame(step);
+                };
+                requestAnimationFrame(step);
+                countObserver.unobserve(node);
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach((node) => countObserver.observe(node));
+
+        /* ---------- Project filtering ---------- */
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const projectCards = document.querySelectorAll("#projectGrid .project-box");
+        const filterEmpty = document.getElementById("filterEmpty");
+
+        filterButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                filterButtons.forEach((b) => {
+                    b.classList.remove("active");
+                    b.setAttribute("aria-pressed", "false");
+                });
+                button.classList.add("active");
+                button.setAttribute("aria-pressed", "true");
+
+                const filter = button.dataset.filter;
+                let shown = 0;
+
+                projectCards.forEach((card) => {
+                    const categories = card.dataset.category.split(" ");
+                    const match = filter === "all" || categories.includes(filter);
+                    card.hidden = !match;
+                    if (match) shown += 1;
+                });
+
+                filterEmpty.hidden = shown > 0;
+            });
+        });
+
+        /* ---------- FAQ accordion ---------- */
+        document.querySelectorAll(".faq-question").forEach((question) => {
+            question.addEventListener("click", () => {
+                const item = question.parentElement;
+                const isOpen = item.classList.contains("open");
+
+                document.querySelectorAll(".faq-item").forEach((other) => {
+                    other.classList.remove("open");
+                    const btn = other.querySelector(".faq-question");
+                    btn.setAttribute("aria-expanded", "false");
+                    btn.querySelector("i").className = "fa-solid fa-plus";
+                });
+
+                if (!isOpen) {
+                    item.classList.add("open");
+                    question.setAttribute("aria-expanded", "true");
+                    question.querySelector("i").className = "fa-solid fa-minus";
+                }
+            });
+        });
+
+        /* ---------- Forms ---------- */
+        const sendForm = async (form, statusNode, successMessage) => {
+            statusNode.textContent = "Sending your message...";
+            statusNode.classList.remove("error");
 
             try {
-                const response = await fetch(contactForm.action, {
+                const response = await fetch(form.action, {
                     method: "POST",
-                    body: new FormData(contactForm),
+                    body: new FormData(form),
                     headers: { "Accept": "application/json" }
                 });
 
                 if (!response.ok) throw new Error("submit failed");
 
-                contactForm.reset();
-                formStatus.textContent = "Thanks, your message was sent successfully.";
+                form.reset();
+                statusNode.textContent = successMessage;
             } catch (error) {
-                formStatus.textContent = "Something went wrong. Please email me directly.";
-                formStatus.classList.add("error");
+                statusNode.textContent = "Something went wrong. Please email me directly.";
+                statusNode.classList.add("error");
             }
+        };
+
+        const contactForm = document.getElementById("contactForm");
+        const formStatus = document.getElementById("formStatus");
+        contactForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            sendForm(contactForm, formStatus, "Thanks, your message was sent successfully.");
         });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
-                const progressSpans = entry.target.querySelectorAll(".progress-bar span");
-                progressSpans.forEach((span) => span.classList.add("animate"));
-            });
-        }, { threshold: 0.5 });
+        const heroForm = document.getElementById("heroForm");
+        const heroStatus = document.getElementById("heroStatus");
+        heroForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            sendForm(heroForm, heroStatus, "Got it, I'll be in touch shortly.");
+        });
 
-        const skillsSection = document.querySelector("#skills");
-        if (skillsSection) observer.observe(skillsSection);
-
-        const yearNode = document.getElementById("year");
-        yearNode.textContent = new Date().getFullYear();
+        /* ---------- Year ---------- */
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>

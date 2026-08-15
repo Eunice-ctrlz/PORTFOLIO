@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loan Default Risk Predictor by Eunice Muturi — KNN and Naive Bayes classifiers scoring Kenyan loan applicants as low, medium or high risk, wrapped in a Django interface.">
+    <meta property="og:title" content="Loan Default Risk Predictor | Eunice Muturi">
+    <meta property="og:description" content="Loan Default Risk Predictor by Eunice Muturi — KNN and Naive Bayes classifiers scoring Kenyan loan applicants as low, medium or high risk, wrapped in a Django interface.">
+    <meta property="og:type" content="article">
+    <title>Loan Default Risk Predictor | Eunice Muturi</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="project-page">
+    <header>
+        <div class="project-topbar">
+            <a class="project-brand" href="../index.html">EUNICE M.</a>
+            <nav class="project-nav">
+                <a href="../index.html#portfolio">Work</a>
+                <a href="../index.html#expertise">Expertise</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+            <a class="btn btn-alt" href="../index.html#contact">Get in Touch</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="project-shell">
+                <a class="project-back-link" href="../index.html#portfolio"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects</a>
+                <p class="eyebrow">Machine Learning &middot; Financial AI</p>
+                <h1 class="project-title">Loan Default Risk Predictor</h1>
+                <p class="project-intro">A supervised-learning system that classifies loan applicants as low, medium or high default risk. Two algorithms trained side by side on a Kenyan financial dataset, compared on equal terms, and served through both a Django web interface and an interactive assessor for bank officers.</p>
+
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Scikit-learn</span>
+                    <span>KNN</span>
+                    <span>Naive Bayes</span>
+                    <span>Pandas</span>
+                    <span>Matplotlib</span>
+                    <span>Django</span>
+                    <span>OOP</span>
+                </div>
+
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Eunice-ctrlz/Loan-predictor-model" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> View Repository</a>
+                </div>
+
+                <div class="case-notice">
+                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                    <p><strong>Demo status:</strong> this one runs locally rather than on a host &mdash; the repository includes the dataset generator, so a fresh clone reproduces the full pipeline and every chart from scratch. Setup steps are at the bottom of this page.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-shell case-section">
+            <h2 class="case-heading">What the model <span>does</span></h2>
+            <p class="case-lead">Two classifiers, one dataset, and a comparison that decides which ships rather than a hunch.</p>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <strong>2</strong>
+                    <span>Algorithms</span>
+                    <small>KNN vs. Naive Bayes</small>
+                </div>
+                <div class="metric-card">
+                    <strong>3</strong>
+                    <span>Risk classes</span>
+                    <small>Low / Medium / High</small>
+                </div>
+                <div class="metric-card">
+                    <strong>200</strong>
+                    <span>Applicant records</span>
+                    <small>Synthetic Kenyan dataset</small>
+                </div>
+                <div class="metric-card">
+                    <strong>4</strong>
+                    <span>Diagnostic charts</span>
+                    <small>Generated at runtime</small>
+                </div>
+                <div class="metric-card">
+                    <strong>K-fold</strong>
+                    <span>Tuning</span>
+                    <small>Cross-validated K selection</small>
+                </div>
+                <div class="metric-card">
+                    <strong>OOP</strong>
+                    <span>Design</span>
+                    <small>Single reusable predictor class</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-shell project-info-grid">
+            <article class="project-panel">
+                <h2>The Problem</h2>
+                <p>A loan officer deciding on an application under time pressure is doing informal risk scoring in their head, and two officers looking at the same file can reach different answers. Inconsistency is expensive in both directions: approving defaults costs money, and declining good applicants costs growth.</p><p>The goal was a repeatable score grounded in the applicant's actual profile &mdash; age, employment status, monthly income, loan amount and term &mdash; that an officer can consult without needing to understand the model internals.</p>
+            </article>
+            <article class="project-panel">
+                <h2>My Role</h2>
+                <p>Sole developer. I generated the dataset, built the preprocessing and training pipeline, implemented both classifiers behind one class interface, produced the evaluation visualisations, and wrapped the whole thing in a Django app plus an interactive terminal assessor.</p>
+                <ul>
+                    <li>Dataset design &amp; generation</li>
+                    <li>Feature preprocessing</li>
+                    <li>Model training &amp; tuning</li>
+                    <li>Evaluation &amp; visualisation</li>
+                    <li>Django web layer</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="project-shell case-section">
+            <h2 class="case-heading">How it's <span>put together</span></h2>
+            <p class="case-lead">Every stage is a script you can run on its own, so the pipeline is reproducible rather than a sequence someone has to remember.</p>
+            <div class="module-grid">
+                <div class="module-card"><i class="fa-solid fa-table" aria-hidden="true"></i><h4>generate_dataset.py</h4><p>Builds the 200-record synthetic dataset reflecting a Kenyan lending context.</p></div>
+                <div class="module-card"><i class="fa-solid fa-cube" aria-hidden="true"></i><h4>loan_risk_predictor.py</h4><p>The <code>LoanRiskPredictor</code> class holding preprocessing, training and prediction.</p></div>
+                <div class="module-card"><i class="fa-solid fa-play" aria-hidden="true"></i><h4>main.py</h4><p>Runs the full pipeline end to end and writes every output artifact.</p></div>
+                <div class="module-card"><i class="fa-solid fa-keyboard" aria-hidden="true"></i><h4>interactive_risk_assessor.py</h4><p>Terminal interface a bank officer can use to score a single applicant.</p></div>
+                <div class="module-card"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><h4>outputs/</h4><p>Correlation heatmap, K-tuning curve, confusion matrices and model comparison.</p></div>
+                <div class="module-card"><i class="fa-solid fa-window-maximize" aria-hidden="true"></i><h4>predictor/</h4><p>Django app with templates, static assets and the model wired into a view.</p></div>
+            </div>
+        </section>
+
+        <section class="project-shell case-section">
+            <h2 class="case-heading">Engineering <span>decisions</span></h2>
+            <div class="decision-grid">
+                <article class="decision-card">
+                    <h3>Two algorithms, not one</h3>
+                    <p>KNN and Naive Bayes make very different assumptions &mdash; distance-based versus probabilistic independence. Training both and comparing them on the same split turns algorithm choice into an evidence question instead of a preference.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Tune K, don't guess it</h3>
+                    <p>The neighbour count is selected by cross-validation and the tuning curve is saved as a chart, so the choice is visible and defensible rather than a magic number in the source.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>One class, one contract</h3>
+                    <p>All the model logic lives in <code>LoanRiskPredictor</code>, so the Django view and the terminal assessor call exactly the same code path. There is no second implementation to drift.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Confusion matrices over accuracy</h3>
+                    <p>In credit risk the two error types have very different costs. Per-class confusion matrices show where each model actually fails, which a single accuracy figure hides.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Synthetic but grounded</h3>
+                    <p>The generator encodes plausible relationships for a Kenyan lending context rather than random noise, so the model has real structure to learn and the pipeline can be reproduced without exposing anyone's financial data.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Two front doors</h3>
+                    <p>A web view for demonstration and a terminal assessor for quick scoring. Same model, two interfaces, no duplicated logic.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="project-shell case-section" id="run-locally">
+            <h2 class="case-heading">Run it <span>locally</span></h2>
+            <p class="case-lead">A clone reproduces the dataset, the trained models and every chart.</p>
+            <div class="run-grid">
+                <div class="run-block">
+                    <h3><i class="fa-brands fa-python" aria-hidden="true"></i> Full pipeline</h3>
+                    <pre><code>git clone https://github.com/Eunice-ctrlz/Loan-predictor-model.git
+cd Loan-predictor-model
+pip install -r requirements.txt
+python generate_dataset.py
+python main.py</code></pre>
+                    <p class="run-note">Writes the processed dataset and all four charts into <code>outputs/</code>.</p>
+                </div>
+                <div class="run-block">
+                    <h3><i class="fa-solid fa-terminal" aria-hidden="true"></i> Interfaces</h3>
+                    <pre><code>python interactive_risk_assessor.py
+
+python manage.py migrate
+python manage.py runserver</code></pre>
+                    <p class="run-note">The assessor scores one applicant at a time; the Django server exposes the web view on <code>localhost:8000</code>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-shell case-cta">
+            <h2>Want a walkthrough of the code?</h2>
+            <p>I'm happy to talk through the architecture or the decisions above &mdash; and I build systems like this for other people too.</p>
+            <div class="project-actions">
+                <a class="btn" href="../index.html#contact">Get in Touch</a>
+                <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/Loan-predictor-model" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> View Repository</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="project-footer">
+        <div class="project-footer-inner">
+            <a class="project-brand" href="../index.html">EUNICE M.</a>
+            <div class="project-footer-links">
+                <a href="https://www.linkedin.com/in/eunice-muturi-7023b6342/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/Eunice-ctrlz" target="_blank" rel="noopener">GitHub</a>
+                <a href="../index.html#contact">Email</a>
+            </div>
+            <div class="project-footer-copy">&copy; <span id="year"></span> Eunice Muturi. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

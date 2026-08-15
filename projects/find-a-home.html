@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FindAHome by Eunice Muturi — a Kenyan real estate platform with role-based access control, verification gates and fraud moderation, built on Django REST with a React 19 front end.">
+    <meta property="og:title" content="FindAHome | Eunice Muturi">
+    <meta property="og:description" content="FindAHome by Eunice Muturi — a Kenyan real estate platform with role-based access control, verification gates and fraud moderation, built on Django REST with a React 19 front end.">
+    <meta property="og:type" content="article">
+    <title>FindAHome | Eunice Muturi</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="project-page">
+    <header>
+        <div class="project-topbar">
+            <a class="project-brand" href="../index.html">EUNICE M.</a>
+            <nav class="project-nav">
+                <a href="../index.html#portfolio">Work</a>
+                <a href="../index.html#expertise">Expertise</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+            <a class="btn btn-alt" href="../index.html#contact">Get in Touch</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="project-shell">
+                <a class="project-back-link" href="../index.html#portfolio"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects</a>
+                <p class="eyebrow">Full Stack &middot; Real Estate</p>
+                <h1 class="project-title">FindAHome</h1>
+                <p class="project-intro">A real estate platform that connects house hunters, landlords and agents without the fraud that makes online property hunting miserable. Django REST backend with four distinct roles, admin verification gates and a moderation queue; React 19 and TypeScript on the front.</p>
+
+                <div class="project-tags">
+                    <span>Django</span>
+                    <span>Django REST Framework</span>
+                    <span>SimpleJWT</span>
+                    <span>django-allauth</span>
+                    <span>React 19</span>
+                    <span>TypeScript</span>
+                    <span>Tailwind 4</span>
+                    <span>Vite</span>
+                    <span>Framer Motion</span>
+                </div>
+
+                <div class="project-actions">
+                    <a class="btn" href="https://find-a-home-self.vercel.app" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Open Live Demo</a>
+                    <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/Find-a-home" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> View Repository</a>
+                </div>
+
+                <div class="case-notice">
+                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                    <p><strong>Demo status:</strong> the React front end is deployed on Vercel so you can walk the interface, but the Django API isn't hosted yet &mdash; listings stay empty until the backend runs. Local setup steps are at the bottom of this page.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-preview-wrap">
+            <div class="project-shell project-preview-card">
+                <div class="project-browser-bar">
+                    <span class="project-browser-dot red"></span>
+                    <span class="project-browser-dot yellow"></span>
+                    <span class="project-browser-dot green"></span>
+                    <span class="project-browser-url">find-a-home-self.vercel.app</span>
+                    <a class="project-browser-open" href="https://find-a-home-self.vercel.app" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+                <div class="project-live-frame">
+                    <iframe src="https://find-a-home-self.vercel.app" title="Live preview of FindAHome" loading="lazy" referrerpolicy="no-referrer"></iframe>
+                </div>
+            </div>
+            <p class="project-frame-note">Live embed of the deployed app. If it doesn't load in your browser, <a href="https://find-a-home-self.vercel.app" target="_blank" rel="noopener">open it in a new tab</a>.</p>
+        </section>
+
+        <section class="project-shell case-section">
+            <h2 class="case-heading">Platform <span>at a glance</span></h2>
+            <p class="case-lead">The interesting work here is authorisation: four roles that see genuinely different systems.</p>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <strong>4</strong>
+                    <span>User roles</span>
+                    <small>Admin, agent, landlord, hunter</small>
+                </div>
+                <div class="metric-card">
+                    <strong>RBAC</strong>
+                    <span>Access model</span>
+                    <small>Enforced in DRF permissions</small>
+                </div>
+                <div class="metric-card">
+                    <strong>2-tier</strong>
+                    <span>Verification</span>
+                    <small>Auto vs. admin-approved</small>
+                </div>
+                <div class="metric-card">
+                    <strong>5</strong>
+                    <span>Backend apps</span>
+                    <small>Users, listings, more</small>
+                </div>
+                <div class="metric-card">
+                    <strong>JWT</strong>
+                    <span>Auth</span>
+                    <small>SimpleJWT + allauth</small>
+                </div>
+                <div class="metric-card">
+                    <strong>React 19</strong>
+                    <span>Front end</span>
+                    <small>TypeScript + Tailwind 4</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-shell project-info-grid">
+            <article class="project-panel">
+                <h2>The Problem</h2>
+                <p>Online property hunting in Kenya has a trust problem. Listings are posted for houses that were let months ago, deposits are collected for properties the poster doesn't control, and the same photos appear under three different agents. House hunters end up paying viewing fees to find out.</p><p>Fixing that isn't a UI problem, it's an authorisation problem: who is allowed to post, who has been verified to do it, and what happens when a listing is reported.</p>
+            </article>
+            <article class="project-panel">
+                <h2>My Role</h2>
+                <p>Sole developer across both halves. I designed the role and permission model, built the DRF API with its verification gates and moderation flow, and built the React front end that consumes it.</p>
+                <ul>
+                    <li>Role &amp; permission design</li>
+                    <li>DRF API and serializers</li>
+                    <li>Verification &amp; moderation flow</li>
+                    <li>React + TypeScript front end</li>
+                    <li>Vercel deployment</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="project-shell case-section">
+            <h2 class="case-heading">System <span>structure</span></h2>
+            <p class="case-lead">A Django REST backend of focused apps, and a Vite-built React client that talks to it over JWT.</p>
+            <div class="module-grid">
+                <div class="module-card"><i class="fa-solid fa-user-shield" aria-hidden="true"></i><h4>users</h4><p>Custom user model, the four roles, and the verification state each one carries.</p></div>
+                <div class="module-card"><i class="fa-solid fa-house" aria-hidden="true"></i><h4>listings</h4><p>Property records, ownership rules, active/verified flags and report handling.</p></div>
+                <div class="module-card"><i class="fa-solid fa-flag" aria-hidden="true"></i><h4>listing reports</h4><p>Users flag listings as fake or unavailable; admins resolve them from a queue.</p></div>
+                <div class="module-card"><i class="fa-solid fa-wand-sparkles" aria-hidden="true"></i><h4>recommendations</h4><p>Matches hunters to listings with its own permission boundaries.</p></div>
+                <div class="module-card"><i class="fa-solid fa-comments" aria-hidden="true"></i><h4>chatbot</h4><p>Conversational assistant for search and questions about a listing.</p></div>
+                <div class="module-card"><i class="fa-brands fa-react" aria-hidden="true"></i><h4>frontend</h4><p>React 19, TypeScript, Tailwind 4 and Framer Motion, bundled by Vite.</p></div>
+            </div>
+        </section>
+
+        <section class="project-shell case-section">
+            <h2 class="case-heading">Engineering <span>decisions</span></h2>
+            <div class="decision-grid">
+                <article class="decision-card">
+                    <h3>Permissions live in the API, not the UI</h3>
+                    <p>Each app ships its own DRF permission classes. Hiding a button in React is a courtesy; the server refusing the request is the actual rule.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Asymmetric verification</h3>
+                    <p>House hunters are auto-verified because the risk they pose is low. Agents and landlords &mdash; the roles that can publish and take money &mdash; wait for an admin. Friction is applied where the fraud actually happens.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Reporting as a first-class model</h3>
+                    <p>A flagged listing creates a report record with a reason and a resolution state, so moderation has a queue and a history rather than an inbox.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Soft flags over deletion</h3>
+                    <p>Listings carry <code>is_active</code> and <code>is_verified</code> rather than being removed. A moderator can reverse a mistake, and the audit trail survives.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Battle-tested auth stack</h3>
+                    <p>dj-rest-auth, django-allauth and SimpleJWT instead of a hand-rolled login. Authentication is the last place to be inventive.</p>
+                </article>
+                <article class="decision-card">
+                    <h3>Separate front end</h3>
+                    <p>The React client is deployed independently of the API, so the interface can ship without redeploying the backend &mdash; and a second client could reuse the same API unchanged.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="project-shell case-section" id="run-locally">
+            <h2 class="case-heading">Run it <span>locally</span></h2>
+            <p class="case-lead">Two terminals: the Django API and the Vite dev server.</p>
+            <div class="run-grid">
+                <div class="run-block">
+                    <h3><i class="fa-brands fa-python" aria-hidden="true"></i> Backend &mdash; Django REST</h3>
+                    <pre><code>git clone https://github.com/Eunice-ctrlz/Find-a-home.git
+cd Find-a-home
+python -m venv .venv &amp;&amp; source .venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver</code></pre>
+                    <p class="run-note">API on <code>localhost:8000</code>. The superuser is what verifies agents and landlords.</p>
+                </div>
+                <div class="run-block">
+                    <h3><i class="fa-brands fa-react" aria-hidden="true"></i> Frontend &mdash; React 19</h3>
+                    <pre><code>cd frontend
+npm install
+npm run dev</code></pre>
+                    <p class="run-note">Vite serves the client on <code>localhost:5173</code>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-shell case-cta">
+            <h2>Want a walkthrough of the code?</h2>
+            <p>I'm happy to talk through the architecture or the decisions above &mdash; and I build systems like this for other people too.</p>
+            <div class="project-actions">
+                <a class="btn" href="../index.html#contact">Get in Touch</a>
+                <a class="btn btn-alt" href="https://github.com/Eunice-ctrlz/Find-a-home" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> View Repository</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="project-footer">
+        <div class="project-footer-inner">
+            <a class="project-brand" href="../index.html">EUNICE M.</a>
+            <div class="project-footer-links">
+                <a href="https://www.linkedin.com/in/eunice-muturi-7023b6342/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/Eunice-ctrlz" target="_blank" rel="noopener">GitHub</a>
+                <a href="../index.html#contact">Email</a>
+            </div>
+            <div class="project-footer-copy">&copy; <span id="year"></span> Eunice Muturi. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
