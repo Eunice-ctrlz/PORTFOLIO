@@ -45,6 +45,13 @@ body {
     overflow-x: hidden;
 }
 
+/* Decorative rings and glow blobs sit outside the layout box. Without this the
+   document widens past the screen on small phones, and because the header is
+   fixed it sizes to that wider box and pushes the menu button off the edge. */
+html {
+    overflow-x: clip;
+}
+
 a {
     color: inherit;
 }

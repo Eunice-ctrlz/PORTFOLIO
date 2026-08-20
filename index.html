@@ -52,7 +52,6 @@
                 <a href="#about">About Me</a>
                 <a href="#expertise">Expertise</a>
                 <a href="#portfolio">Projects</a>
-                <a href="#packages">Packages</a>
                 <a href="#faq">FAQs</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -157,10 +156,10 @@
             </div>
 
             <div class="stat-grid">
-                <div class="stat-card"><strong data-count="8">0</strong><span>Projects shipped</span></div>
-                <div class="stat-card"><strong data-count="82" data-suffix="%">0</strong><span>STI model test accuracy</span></div>
-                <div class="stat-card"><strong data-count="15" data-suffix="+">0</strong><span>Tools &amp; frameworks</span></div>
-                <div class="stat-card"><strong data-count="100" data-suffix="%">0</strong><span>Remote-ready delivery</span></div>
+                <div class="stat-card"><strong data-count="8">8</strong><span>Projects shipped</span></div>
+                <div class="stat-card"><strong data-count="82" data-suffix="%">82%</strong><span>STI model test accuracy</span></div>
+                <div class="stat-card"><strong data-count="15" data-suffix="+">15+</strong><span>Tools &amp; frameworks</span></div>
+                <div class="stat-card"><strong data-count="100" data-suffix="%">100%</strong><span>Remote-ready delivery</span></div>
             </div>
         </section>
 
@@ -526,7 +525,6 @@
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#expertise">Expertise</a></li>
                     <li><a href="#portfolio">Projects</a></li>
-                    <li><a href="#packages">Packages</a></li>
                     <li><a href="#faq">FAQs</a></li>
                 </ul>
             </div>
@@ -679,6 +677,8 @@
         if (skillsSection) skillObserver.observe(skillsSection);
 
         /* ---------- Animated counters ---------- */
+        /* Values are already correct in the markup, so they survive JS being off,
+           slow or blocked. This only replays them as an animation. */
         const counters = document.querySelectorAll(".stat-card strong");
         const countObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -699,7 +699,7 @@
             });
         }, { threshold: 0.5 });
 
-        counters.forEach((node) => countObserver.observe(node));
+        if (!reduceMotion) counters.forEach((node) => countObserver.observe(node));
 
         /* ---------- Project filtering ---------- */
         const filterButtons = document.querySelectorAll(".filter-btn");
